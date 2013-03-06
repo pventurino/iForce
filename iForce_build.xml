@@ -16,6 +16,13 @@
         <sf:deploy username="${username}" password="${password}" serverurl="${serverurl}" deployRoot="payload"></sf:deploy>
     </target>
 
+    <!-- run test class -->
+    <target name="runtest">
+        <sf:deploy username="${username}" password="${password}" serverurl="${serverurl}" deployRoot="payload">
+            <runTest>${testclass}</runTest>
+        </sf:deploy>
+    </target>
+
     <!-- refresh from server -->
     <target name="getLatest">
         <sf:retrieve
